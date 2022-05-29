@@ -3,8 +3,8 @@
         <nav class="navbar fixed-bottom navbar-light bg-light max-width: 300px; margin: auto;">
             <div class="container-fluid">
                 <a class="nav-link"  href="{% url 'product_list' %}"><i class="fa-solid fa-house"></i></a>
-                <a class="nav-link"  href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a class="nav-link" href="{% url 'order' %}"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a class="nav-link"  href="{% url 'cart:cart_detail' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="nav-link" href="{% url 'orders:order_create' %}"><i class="fa-solid fa-bag-shopping"></i></a>
             </div>
         </nav>
     </div>

@@ -1,21 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
- <h1>Checkout</h1>
+ <h1>Оформление заказа</h1>
  <div class="order-info">
- <h3>Your order</h3>
+ <h3>Мой заказ</h3>
  <ul>
  {% for item in cart %}
  <li>
  {{ item.quantity }}x {{ item.product.title }}
- <span>${{ item.total_price }}</span>
+ <span>{{ item.total_price }} тг</span>
  </li>
  {% endfor %}
  </ul>
- <p>Total: ${{ cart.get_total_price }}</p>
+ <p>Total: {{ cart.get_total_price }} тг</p>
  </div>
- <form action="." method="post" class="order-form">
- {{ form.as_p }}
- <p><input type="submit" value="Place order"></p>
- {% csrf_token %}
+ <form action="" method="post" class="order-form">
+
+{% csrf_token %}
+     <div class="input-group mb-3">
+         <span class="input-group-text" id="basic-addon1">@</span>
+         <input name="email" id="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+     </div>
+
+     <div class="input-group mb-3">
+         <input name="first_name" id="first_name" type="text" class="form-control" placeholder="Имя" aria-label="Username">
+         <input name="last_name" id="last_name" type="text" class="form-control" placeholder="Фамилия" aria-label="Server">
+     </div>
+
+     <div class="input-group mb-3">
+         <input name="city" id="city" type="text" class="form-control" placeholder="Город">
+         <input name="address" id="address" type="text" class="form-control" placeholder="Адрес">
+     </div>
+ <p><input type="submit" value="Place order" style="color: #E5E5E5; background-color: #0C7264; width: 170px; height: 46px; border-radius: 10px"></p>
  </form>
 {% endblock %}

@@ -21,20 +21,26 @@
     }
 </style>
 <div class = "main-container">
-    <h4>Меню продуктов</h4>
+<samp><h4 style="text-align: center">Меню продуктов</h4></samp>
+
     <div class = "filter-container">
     </div>
     <div class = "main-container">
         <div class = "filter-container">
             <div class = "category-head">
+
                 <ul>
                     {% for category in categories %}
                     <div class="list-group">
 
                         <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action list-group-item-primary" style="width: 300px;">{{ category.title }}</a>
+<hr style="width: 300px">
 
-                        {% endfor %}
+
+                    </div>
+                    {% endfor %}
                 </ul>
+
             </div>
 
             <div class = "posts-collect">
@@ -43,22 +49,27 @@
                     <div class = "all burger">
                         <div class = "post-img">
                             {% for product in products %}
-                            <div class="card" style="width: 18rem;">
+
+                                <span class="primary">
+                            <div class="card" style="width: 150px; height: 150px; margin-left: 10px; margin-top: 15px">
                                 <a href="{{ product.get_absolute_url }}" class="card-img-top">
-                                    <img src="{{ product.photo.url }}" width="250">
+                                    <img src="{{ product.photo.url }}" width="150">
                                 </a>
                                 <div class="card-body">
                                     <a class="card-title" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                                     <p class="card-text">{{ product.price }} тг</p>
                                 </div>
                             </div>
+                                </span>
+
+
 
                             {% endfor %}
 
                         </div>
                     </div>
                 </div>
-                <hr style="width: 400px">
+                <hr style="width: 450px">
                 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="height: 250px">
@@ -72,16 +83,16 @@
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #188274"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #188274"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div>
-            <hr style="width: 400px">
+            <hr style="width: 450px">
         </div>
 </body>
 {% endblock %}

@@ -410,11 +410,14 @@ body {
     border-radius: 30px;
     color: #E5E5E5;
     background: linear-gradient(112.45deg, #0C7264 0%, #188274 100%);
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 21px;
 
+}
+.ddd{
+    width: 500px;
 }
 /* Product page */
