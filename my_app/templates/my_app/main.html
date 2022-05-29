@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+<style>
+    input[type="search"] {
+        background-color: #EFEEEE;
+        height: 46px;
+        width: 200px;
+        /* border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px; */
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
+        margin-left: 5px;
+    }
+    .main_body {
+        margin-top: 42px;
+        /* margin-left: 53px; */
+    }
+</style>
+<div class = "main-container">
+    <h4>Меню продуктов</h4>
+    <div class = "filter-container">
+    </div>
+    <div class = "main-container">
+        <div class = "filter-container">
+            <div class = "category-head">
+                <ul>
+                    {% for category in categories %}
+                    <div class="list-group">
+
+                        <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action list-group-item-primary" style="width: 300px;">{{ category.title }}</a>
+
+                        {% endfor %}
+                </ul>
+            </div>
+
+            <div class = "posts-collect">
+                <div class = "posts-main-container">
+
+                    <div class = "all burger">
+                        <div class = "post-img">
+                            {% for product in products %}
+                            <div class="card" style="width: 18rem;">
+                                <a href="{{ product.get_absolute_url }}" class="card-img-top">
+                                    <img src="{{ product.photo.url }}" width="250">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    <p class="card-text">{{ product.price }} тг</p>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <hr style="width: 400px">
+                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 250px">
+                            <img src="https://img.freepik.com/free-photo/the-clock-in-the-snow-shows-the-time-at-12-o-clock-winter-coming-soon-concept_404461-320.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" style="height: 250px">
+                            <img src="https://img.freepik.com/free-photo/the-clock-in-the-snow-shows-the-time-at-12-o-clock-winter-coming-soon-concept_404461-320.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" style="height: 250px">
+                            <img src="https://img.freepik.com/free-photo/the-clock-in-the-snow-shows-the-time-at-12-o-clock-winter-coming-soon-concept_404461-320.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <hr style="width: 400px">
+        </div>
+</body>
+{% endblock %}

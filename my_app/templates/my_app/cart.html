@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+<div class="top_cart">
+    <div class="cart_nav" style="max-width: 300px; margin: auto;">
+        <a class="back-link" href="main.html"><i class="fa-solid fa-circle-chevron-left"></i></a>
+        <h3 class="cart_text text-center">Корзина</h3>
+    </div>
+
+
+</div>
+
+<div class="card mb-3" style="max-width: 300px;">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="" width="80px" height="80px" class="img-fluid rounded-start" alt="pizza">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <a class="card-link" href="main.html">Ссылка 1 блюда</a>
+                <div class="row">
+                    <p class="card-text"><small class="text-price">Цена</small></p>
+
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+</div>
+
+<div class="card mb-3" style="max-width: 300px;">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="images/pizza.png" width="80px" height="80px" class="img-fluid rounded-start" alt="pizza">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <a class="card-link" href="main.html">Ссылка 1 блюда</a>
+                <div class="row">
+                    <p class="card-text"><small class="text-price">Цена</small></p>
+                    <!-- <div class="counter">
+                        <i class="fa-duotone fa-circle-minus"></i>
+                        <input class="input-number" type="text" value="1"min="0"max="10" >
+                        <i class="fa-duotone fa-circle-plus"></i>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+</div>
+</body>
+{% endblock %}

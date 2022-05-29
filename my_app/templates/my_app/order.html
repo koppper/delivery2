@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body>
+
+            <style>
+                body{
+                    margin-left: 40px;
+                    background-color: #E5E5E5;
+                }
+                input[type="date"]{
+                    /* margin-top: 20px; */
+                    height: 40px;
+                    border-bottom-right-radius: 0px;
+                    padding-top: 20px;
+                    border: none;
+                    border-radius: 20px;
+                }
+                input[type="time"]{
+
+                    height: 40px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-radius: 20px;
+                    border: none;
+                }
+                input[type="text"]{
+                    padding-top: 20px;
+                    height: 60px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-radius: 20px;
+                    border: none;
+                }
+            </style>
+
+
+        <div class="top_cart">
+            <div class="cart_nav" style="max-width: 300px;">
+                <a class="back-link" href="main.html"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                <h3 class="cart_text">Страница заказа</h3>
+            </div>
+
+
+        </div>
+
+        <div class="forma-zapol">
+            <div class="vrema">
+                <div class="col g-2" style="max-width: 300px;">
+                    <p class="order-text">Время доставки</p>
+                    <div class="box">
+                        <input type="date" id="calendar" class="form-control" placeholder="Дата" required autofocus>
+                        <hr></hr>
+                        <input type="time" class="form-control" placeholder="Время" aria-label="Time name"required autofocus>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="place">
+                <div class="col g-2" style="max-width: 300px;">
+                    <p class="order-text">Способ доставки</p>
+
+                    <input type="text" id="adres" class="form-control" placeholder="Адрес" required autofocus>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center" style="max-width: 300px;">
+            <button class="btn">Заказать</button>
+        </div>
+    </body>
+{% endblock %}
