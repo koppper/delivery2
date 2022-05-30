@@ -12,7 +12,7 @@
  </ul>
  <p>Total: {{ cart.get_total_price }} тг</p>
  </div>
- <form action="" method="post" class="order-form">
+ <form action="." method="post" class="order-form">
 
 {% csrf_token %}
      <div class="input-group mb-3">
@@ -28,7 +28,9 @@
      <div class="input-group mb-3">
          <input name="city" id="city" type="text" class="form-control" placeholder="Город">
          <input name="address" id="address" type="text" class="form-control" placeholder="Адрес">
+         <input name="date_time" type="datetime-local" placeholder="Дата и время">
      </div>
- <p><input type="submit" value="Place order" style="color: #E5E5E5; background-color: #0C7264; width: 170px; height: 46px; border-radius: 10px"></p>
+ <p><input type="submit" value="Place order"></p>
+
  </form>
 {% endblock %}
