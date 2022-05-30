@@ -61,7 +61,7 @@ def register(request):
             messages.success(request, 'Вы успешно зарегистрировались')
             Profile.objects.create(user=user)
             user.save()
-            return redirect('main')
+            return redirect('product_list')
     else:
         form = UserRegisterForm()
         messages.error(request, 'Ошибка регистрации')
@@ -78,5 +78,5 @@ def log_in(request):
         if user is None:
             context['error'] = "Entered username or password are invalid!"
         else:
-            return redirect("main")
+            return redirect("product_list")
     return render(request, "order/login.html", context=context)
