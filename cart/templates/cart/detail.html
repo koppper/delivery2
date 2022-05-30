@@ -2,8 +2,11 @@
 {% load static %}
 {% block content %}
 
-<div class="bg-success p-2 text-dark bg-opacity-10"><h3 style="text-align: center">Корзина</h3></div>
-<table class="cart">
+<div class="bg-success p-2 text-dark bg-opacity-10">
+
+  <h3 style="text-align: center">Корзина</h3>
+</div>
+<table class="cart" style="margin-top: 20px">
   {% for item in cart %}
   {% with product=item.product %}
   <tr>
