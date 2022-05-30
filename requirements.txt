@@ -27,7 +27,6 @@ django-redis-cache==3.0.0
 
 django-templated-mail==1.1.1
 djangorestframework==3.12.4
-djoser==2.1.0
 
 drf-yasg==1.20.0
 dump==0.0.5
@@ -38,14 +37,7 @@ inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.0.1
 joblib==1.0.1
-jsonschema==3.2.0
 
-Markdown==3.3.6
-
-mypy-extensions==0.4.3
-mysql-connector==2.2.9
-mysqlclient==2.1.0
-num2words==0.5.10
 oauthlib==3.1.1
 Pillow==8.3.1
 psycopg2==2.9.3
@@ -54,8 +46,6 @@ pytz==2021.1
 redis==3.5.3
 redis-simple-cache==0.0.8
 social-auth-core==4.1.0
-uritemplate==3.0.1
-urllib3==1.26.4
 utils==1.0.1
 virtualenv==20.4.7
 
