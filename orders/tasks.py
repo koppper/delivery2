@@ -1,9 +1,10 @@
-from celery import group, shared_task
+from celery import group, shared_task, task
 from django.core.mail import send_mail
 from .models import Order
+# from send_email.celery import app
 
 
-@shared_task
+@task
 def order_created(order_id):
     """Задача отправки email-уведомлений при успешном оформлении заказа."""
     order = Order.objects.get(id=order_id)
