@@ -31,7 +31,6 @@ django-rest-framework-nested==0.0.1
 django-simple-captcha==0.5.15
 django-templated-mail==1.1.1
 djangorestframework==3.12.4
-djangorestframework-simplejwt==4.7.2
 djoser==2.1.0
 docopt==0.6.2
 drf-yasg==1.20.0
