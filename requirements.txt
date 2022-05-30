@@ -38,7 +38,6 @@ dump==0.0.5
 environs==9.3.2
 filelock==3.0.12
 idna==2.10
-importlib-metadata==4.10.0
 inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.0.1
