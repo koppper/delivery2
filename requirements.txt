@@ -2,3 +2,4 @@ Django
 celery==5.1.2
 psycopg2
 redis==3.5.3
+Pillow
