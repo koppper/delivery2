@@ -36,24 +36,17 @@
                 <ul>
                     {% for category in categories %}
                     <div class="list-group">
-
                         <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action list-group-item-primary" style="width: 300px;">{{ category.title }}</a>
 <hr style="width: 300px">
-
-
                     </div>
                     {% endfor %}
                 </ul>
-
             </div>
-
             <div class = "posts-collect">
                 <div class = "posts-main-container">
-
                     <div class = "all burger">
                         <div class = "post-img">
                             {% for product in products %}
-
                                 <span class="primary">
                             <div class="card" style="width: 150px; height: 150px; margin-left: 10px; margin-top: 15px">
                                 <a href="{{ product.get_absolute_url }}" class="card-img-top">
@@ -65,9 +58,6 @@
                                 </div>
                             </div>
                                 </span>
-
-
-
                             {% endfor %}
 
                         </div>
