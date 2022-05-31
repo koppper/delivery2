@@ -9,4 +9,5 @@ urlpatterns = [
     path('profile/<int:pk>/', ShowProfilePageView.as_view(), name='profile'),
     path('create_profile_page/', CreateProfilePageView.as_view(), name='create_user_profile'),
     path('edit/', edit, name='edit'),
+    path('logout', user_logout, name='logout'),
 ]

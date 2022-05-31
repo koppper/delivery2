@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
@@ -80,3 +80,9 @@ def log_in(request):
         else:
             return redirect("product_list")
     return render(request, "order/login.html", context=context)
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('login')
+
